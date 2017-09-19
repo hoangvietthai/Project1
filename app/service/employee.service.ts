@@ -9,7 +9,7 @@ export class EmployeeService{
     {
 
     }
-    GetList(): Observable<any[]>{
+    getList(): Observable<any>{
        return this._http.get(this.apiUrl).map((response: Response)=>response.json());
     }
 }

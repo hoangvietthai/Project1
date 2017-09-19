@@ -17,7 +17,7 @@ var EmployeeService = /** @class */ (function () {
         this._http = _http;
         this.apiUrl = "http://59ba423436acf20011fe29dd.mockapi.io/api/employees";
     }
-    EmployeeService.prototype.GetList = function () {
+    EmployeeService.prototype.getList = function () {
         return this._http.get(this.apiUrl).map(function (response) { return response.json(); });
     };
     EmployeeService = __decorate([

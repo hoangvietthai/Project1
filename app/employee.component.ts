@@ -8,7 +8,7 @@ export class EmployeeListComponent implements OnInit {
     public employees: any[];
     constructor(private employeeservice: EmployeeService) { };
     ngOnInit() {
-        this.employeeservice.GetList().subscribe((response: any) => {
+        this.employeeservice.getList().subscribe((response: any) => {
             this.employees = response;
         });
     }
