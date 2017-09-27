@@ -4,12 +4,15 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 @Injectable()
 export class EmployeeService{
-    private apiUrl="http://59ba423436acf20011fe29dd.mockapi.io/api/employees";
+    private apiUrl="http://59ba423436acf20011fe29dd.mockapi.io/api/employees/";
     constructor (private _http: Http)
     {
 
     }
     getList(): Observable<any>{
        return this._http.get(this.apiUrl).map((response: Response)=>response.json());
+    }
+    GetSingle(id: number): Observable<any> {
+        return this._http.get(this.apiUrl + id).map((response: Response) => response.json())
     }
 }

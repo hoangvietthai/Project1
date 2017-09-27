@@ -5,10 +5,18 @@ var home_component_1 = require("./home.component");
 var employee_component_1 = require("./employee.component");
 var notFoundComponent_component_1 = require("./notFoundComponent.component");
 var employee_detail_component_1 = require("./employee-detail.component");
+var employee_projects_component_1 = require("./employee-projects.component");
+var employee_overview_component_1 = require("./employee-overview.component");
 var routing = [
     { path: '', component: home_component_1.HomeComponent },
     { path: 'employees', component: employee_component_1.EmployeeListComponent },
-    { path: 'employee-detail/:id', component: employee_detail_component_1.employeeDetailComponent },
+    {
+        path: 'employee-detail/:id', component: employee_detail_component_1.employeeDetailComponent, children: [
+            { path: '', redirectTo: 'overview', pathMatch: 'full' },
+            { path: 'overview', component: employee_overview_component_1.EmployeeOverviewComponent },
+            { path: 'projects', component: employee_projects_component_1.EmployeeProjectsComponent },
+        ]
+    },
     { path: '**', component: notFoundComponent_component_1.notFoundComponent }
 ];
 exports.appRoutes = router_1.RouterModule.forRoot(routing);

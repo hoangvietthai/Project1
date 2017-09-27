@@ -1,5 +1,6 @@
 import {Component,OnInit,OnDestroy} from '@angular/core';
 import {Router,ActivatedRoute} from '@angular/router';
+import { EmployeeService } from './service/employee.service';
 import {Subscription} from 'rxjs';
 @Component ({
     selector:'employee-detail-component',
@@ -7,8 +8,10 @@ import {Subscription} from 'rxjs';
 })
 export class employeeDetailComponent implements OnInit, OnDestroy{
     public _id: number;
-    public subscription: any;
-   constructor (private router: Router,private activatedRoute:ActivatedRoute)
+    public subscription: Subscription;
+    public employee: any;
+   constructor (private router: Router,private activatedRoute:ActivatedRoute,
+     public employeeService: EmployeeService)
    {
 
    };
@@ -16,8 +19,11 @@ export class employeeDetailComponent implements OnInit, OnDestroy{
    {
       this.subscription=this.activatedRoute.params.subscribe(params=>{
           this._id=params['id'];
-          alert(this._id);
-      })
+      });
+      this.employeeService.GetSingle(this._id).subscribe((data) => {
+        this.employee = data;
+        console.log(this.employee);
+    });
    }
    goToEmployee()
    {

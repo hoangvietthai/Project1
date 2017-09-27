@@ -11,17 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var employee_service_1 = require("./service/employee.service");
 var employeeDetailComponent = /** @class */ (function () {
-    function employeeDetailComponent(router, activatedRoute) {
+    function employeeDetailComponent(router, activatedRoute, employeeService) {
         this.router = router;
         this.activatedRoute = activatedRoute;
+        this.employeeService = employeeService;
     }
     ;
     employeeDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.subscription = this.activatedRoute.params.subscribe(function (params) {
             _this._id = params['id'];
-            alert(_this._id);
+        });
+        this.employeeService.GetSingle(this._id).subscribe(function (data) {
+            _this.employee = data;
+            console.log(_this.employee);
         });
     };
     employeeDetailComponent.prototype.goToEmployee = function () {
@@ -35,7 +40,8 @@ var employeeDetailComponent = /** @class */ (function () {
             selector: 'employee-detail-component',
             templateUrl: './app/employee-detail.component.html'
         }),
-        __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute])
+        __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute,
+            employee_service_1.EmployeeService])
     ], employeeDetailComponent);
     return employeeDetailComponent;
 }());
