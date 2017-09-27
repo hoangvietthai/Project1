@@ -9,8 +9,8 @@
 6 silly lifecycle angular-quickstart@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle angular-quickstart@1.0.0~start: angular-quickstart@1.0.0
 8 verbose lifecycle angular-quickstart@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle angular-quickstart@1.0.0~start: PATH: E:\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Slice\Documents\angular2\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;E:\nodejs\;C:\Program Files\Git\cmd;C:\Users\Slice\AppData\Local\Microsoft\WindowsApps;;E:\Microsoft VS Code\bin;C:\Users\Slice\AppData\Roaming\npm
-10 verbose lifecycle angular-quickstart@1.0.0~start: CWD: C:\Users\Slice\Documents\angular2
+9 verbose lifecycle angular-quickstart@1.0.0~start: PATH: E:\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Slice\Documents\Project1\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;E:\nodejs\;C:\Program Files\Git\cmd;C:\Users\Slice\AppData\Local\Microsoft\WindowsApps;;E:\Microsoft VS Code\bin;C:\Users\Slice\AppData\Roaming\npm
+10 verbose lifecycle angular-quickstart@1.0.0~start: CWD: C:\Users\Slice\Documents\Project1
 11 silly lifecycle angular-quickstart@1.0.0~start: Args: [ '/d /s /c', 'tsc & concurrently "tsc -w" "lite-server" ' ]
 12 verbose stack Error: kill ENOSYS
 12 verbose stack     at exports._errnoException (util.js:1020:11)
@@ -21,7 +21,7 @@
 12 verbose stack     at processEmit (E:\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
 12 verbose stack     at processEmit (E:\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
 12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
-13 verbose cwd C:\Users\Slice\Documents\angular2
+13 verbose cwd C:\Users\Slice\Documents\Project1
 14 error Windows_NT 10.0.15063
 15 error argv "E:\\nodejs\\node.exe" "E:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
 16 error node v6.11.2
